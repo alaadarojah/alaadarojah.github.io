@@ -3,41 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A'Laa Darojah | GIS Portfolio</title>
+<title>A'Laa Darojah | Geospatial Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
 
 html { scroll-behavior: smooth; }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: 'Inter', sans-serif;
   background: #f8fafc;
   color: #1e293b;
 }
 
-/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 18px 8%;
   position: fixed;
   width: 100%;
   background: white;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   z-index: 1000;
-}
-
-.logo {
-  font-weight: 800;
-  color: #0ea5e9;
 }
 
 nav ul {
@@ -50,55 +38,41 @@ nav a {
   text-decoration: none;
   color: #334155;
   font-weight: 500;
-  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #0ea5e9;
-}
-
-/* SECTIONS */
 section {
   padding: 120px 8%;
 }
 
-.section-alt {
-  background: #f1f5f9;
-}
-
-h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #0ea5e9;
-}
-
-p {
-  line-height: 1.7;
-}
-
-/* HERO */
 .hero {
   padding-top: 150px;
   text-align: center;
 }
 
-.hero h2 {
-  color: #475569;
-  font-weight: 400;
+.hero h1 {
+  font-size: 3rem;
 }
 
-/* CARD */
+.hero p {
+  color: #475569;
+}
+
+h2 {
+  color: #0ea5e9;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
 .card {
   background: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  margin-bottom: 20px;
   transition: 0.3s;
 }
 
@@ -106,28 +80,30 @@ p {
   transform: translateY(-5px);
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
+.project-img {
+  width: 100%;
+  height: 180px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
 
-/* FOOTER */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: #0ea5e9;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
 .footer {
   text-align: center;
   padding: 40px;
   background: #0f172a;
   color: white;
-}
-
-@media(max-width:768px) {
-  nav ul {
-    gap: 12px;
-  }
-  h1 {
-    font-size: 2rem;
-  }
 }
 
 </style>
@@ -136,76 +112,89 @@ p {
 <body>
 
 <nav>
-  <div class="logo">A'Laa Darojah</div>
+  <div><strong>A'Laa Darojah</strong></div>
   <ul>
     <li><a href="#about">About</a></li>
-    <li><a href="#education">Education</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <section class="hero">
   <h1>Geospatial & GIS Analyst</h1>
-  <h2>Spatial Data • GNSS Survey • Remote Sensing • WebGIS</h2>
+  <p>Spatial Data • Remote Sensing • GNSS Survey • WebGIS Development</p>
 </section>
 
-<section id="about" class="section-alt">
+<section id="about">
   <h2>About</h2>
   <div class="card">
-    Geospatial and Survey-Oriented GIS Analyst with experience in spatial database integration, GNSS-based coordinate acquisition,
-    spatial quality control, and remote sensing analysis using Google Earth Engine and Python.
+    GIS Analyst with experience in spatial database integration, GNSS-based coordinate acquisition,
+    remote sensing ecological analysis, and WebGIS dashboard development.
   </div>
 </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="card">
-    <strong>Universitas Gadjah Mada</strong><br>
-    Bachelor of Cartography & Remote Sensing (GPA 3.79/4.00)<br><br>
-    Thesis: Spatio-temporal ecological assessment (2014–2024) using RSEI derived from Landsat 8 in Google Earth Engine.
-  </div>
-</section>
-
-<section id="experience" class="section-alt">
+<section id="experience">
   <h2>Experience</h2>
   <div class="grid">
-    <div class="card">
-      <strong>PT LPP AGRO NUSANTARA</strong><br>
-      Integrated 30,000+ land parcel polygons into national geospatial database with strict spatial QC.
-    </div>
-    <div class="card">
-      <strong>Fairatmos</strong><br>
-      Land cover interpretation (16 classes) using Landsat 8 with 90% accuracy validation.
-    </div>
-    <div class="card">
-      <strong>Geoaccess Indonesia</strong><br>
-      Facilitated Python & Google Colab geospatial training for BAPPEDA Kudus.
-    </div>
+    <div class="card">PT LPP AGRO NUSANTARA — 30,000+ parcel integration</div>
+    <div class="card">Fairatmos — 90% accurate land cover classification</div>
+    <div class="card">Geoaccess Indonesia — Python GIS workshop facilitator</div>
   </div>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
+  <h2>Featured Projects</h2>
   <div class="grid">
     <div class="card">
-      <strong>Disaster Risk WebGIS</strong><br>
-      Sentinel-2 based monitoring dashboard using Google Earth Engine.
+      <div class="project-img"></div>
+      <strong>Disaster Risk WebGIS</strong>
+      <p>Sentinel-2 & Google Earth Engine dashboard.</p>
+      <a href="#" class="btn">View</a>
     </div>
+
     <div class="card">
-      <strong>Flood Monitoring SAR</strong><br>
-      Sentinel-1 SAR flood detection with time-series processing.
+      <div class="project-img"></div>
+      <strong>Flood Monitoring SAR</strong>
+      <p>Sentinel-1 SAR flood detection analysis.</p>
+      <a href="#" class="btn">View</a>
+    </div>
+
+    <div class="card">
+      <div class="project-img"></div>
+      <strong>RSEI Ecological Assessment</strong>
+      <p>Landsat 8 ecological time-series modeling.</p>
+      <a href="#" class="btn">View</a>
     </div>
   </div>
 </section>
 
-<section id="skills" class="section-alt">
-  <h2>Skills</h2>
-  <div class="card">
-    <strong>Hard Skills:</strong> ArcGIS Pro, QGIS, Google Earth Engine, Python (GeoPandas, Rasterio), GNSS Survey, Spatial QC.<br><br>
-    <strong>Soft Skills:</strong> Leadership, Public Speaking, Team Coordination, Quality Control.
+<section>
+  <h2>All Projects</h2>
+  <div class="grid">
+    <!-- Duplicate this card until you fill 10 projects -->
+
+    <div class="card">
+      <div class="project-img"></div>
+      <strong>Project Title</strong>
+      <p>Short description of the project.</p>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+
+    <div class="card">
+      <div class="project-img"></div>
+      <strong>Project Title</strong>
+      <p>Short description of the project.</p>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+
+    <div class="card">
+      <div class="project-img"></div>
+      <strong>Project Title</strong>
+      <p>Short description of the project.</p>
+      <a href="#" class="btn">GitHub</a>
+    </div>
+
   </div>
 </section>
 
@@ -213,13 +202,12 @@ p {
   <h2>Contact</h2>
   <div class="card">
     Email: alaa.darojah@mail.ugm.ac.id<br>
-    GitHub: github.com/alaadarojah<br>
-    LinkedIn: linkedin.com/in/a-laa-darojah
+    GitHub: github.com/alaadarojah
   </div>
 </section>
 
 <div class="footer">
-  © 2026 A'Laa Darojah | GIS Portfolio
+  © 2026 A'Laa Darojah | Geospatial Portfolio
 </div>
 
 </body>
